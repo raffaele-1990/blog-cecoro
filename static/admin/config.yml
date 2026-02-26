@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: raffaele-1990/blog-cecoro
+  branch: main
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: "posts"
+    label: "Articoli"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: "Titolo (SEO)", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Descrizione (meta)", name: "description", widget: "string" }
+      - { label: "Tag", name: "tags", widget: "list", required: false }
+      - { label: "Bozza", name: "draft", widget: "boolean", default: false }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
+
+  - name: "pagine"
+    label: "Pagine"
+    files:
+      - label: "Chi sono"
+        name: "chi-sono"
+        file: "content/chi-sono/index.md"
+        fields:
+          - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Descrizione", name: "description", widget: "string" }
+          - { label: "Contenuto", name: "body", widget: "markdown" }
+      - label: "Pubblicazioni"
+        name: "pubblicazioni"
+        file: "content/pubblicazioni/index.md"
+        fields:
+          - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Descrizione", name: "description", widget: "string" }
+          - { label: "Contenuto", name: "body", widget: "markdown" }
+      - label: "Contatti"
+        name: "contatti"
+        file: "content/contatti/index.md"
+        fields:
+          - { label: "Titolo", name: "title", widget: "string" }
+          - { label: "Descrizione", name: "description", widget: "string" }
+          - { label: "Contenuto", name: "body", widget: "markdown" }
