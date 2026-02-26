@@ -28,15 +28,11 @@ params:
   # Home "demo style" (Home-Info mode)
   homeInfoParams:
     Title: "Avvocato Raffaele Cecoro"
-    Content: >
-Avvocato, giornalista pubblicista e docente, ogni giorno per me è un’opportunità di esplorazione, un' incessante scoperta di dettagli che sfuggono all’occhio distratto. Mi lascio sedurre dalla bellezza del particolare.
-
-
-
+    Content: > Avvocato, giornalista pubblicista e docente, ogni giorno per me è un’opportunità di esplorazione, un' incessante scoperta di dettagli che sfuggono all’occhio distratto. Mi lascio sedurre dalla bellezza del particolare.
 
   socialIcons:
     - name: github
-      url: "https://github.com/USERNAME"
+      url: "https://github.com/raffaele-1990"
     - name: linkedin
       url: "https://it.linkedin.com/in/raffaele-cecoro-67645b42"
 
