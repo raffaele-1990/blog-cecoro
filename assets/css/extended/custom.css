@@ -5,3 +5,17 @@
 body, button, input, select, textarea {
   font-family: var(--font-family);
 }
+
+/* Spazio sotto header e menu */
+.header {
+  margin-bottom: 2rem; /* Aumenta per più spazio, es. 3rem o 50px */
+}
+
+/* Spazio sotto social icons (nel footer o header) */
+.social-icons {
+  margin-bottom: 2rem;
+}
+
+.social-icon {
+  margin-bottom: 1rem; /* Se icone singole */
+}
