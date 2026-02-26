@@ -6,7 +6,7 @@ date: 2026-02-26T18:00:00+01:00
 
 description: "Checklist per selezionare un avvocato per la tua azienda: specializzazione, metodo, costi, tempi e gestione del rischio."
 
-tags: \["impresa", "contratti", "contenzioso", "strategia legale"]
+tags: "impresa", "contratti", "contenzioso", "strategia legale"
 
 draft: false
 
