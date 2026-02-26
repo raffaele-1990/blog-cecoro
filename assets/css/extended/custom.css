@@ -1,7 +1,94 @@
+/* Font SF Pro stile Apple */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
-    "Helvetica Neue", Arial, sans-serif;
+  --font-family-apple: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-body, button, input, select, textarea {
-  font-family: var(--font-family);
+
+body {
+  font-family: var(--font-family-apple) !important;
+  line-height: 1.6;
+  letter-spacing: -0.01em; /* Kerning Apple-like */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fafafa; /* Grigio tenue Apple */
+  color: #1d1d1f; /* Nero Apple */
+}
+
+/* Header minimalista */
+.header {
+  background: transparent;
+  border-bottom: 1px solid #d2d2d7;
+  padding: 1rem 0;
+}
+
+/* Home info con hero style Apple */
+#home-info {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f5f5f7 0%, #fafafa 100%);
+}
+
+#home-info h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+#home-info p {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+/* Cards post con bordi arrotondati e ombre soft */
+.post-entry {
+  background: white;
+  border-radius: 18px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.post-entry:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Menu orizzontale pulito */
+.menu__container {
+  gap: 2rem;
+}
+
+.menu__link {
+  font-weight: 500;
+  text-decoration: none;
+  color: #1d1d1f;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: color 0.2s;
+}
+
+.menu__link:hover {
+  background: #f5f5f7;
+}
+
+/* Dark mode adaptations */
+.dark #home-info {
+  background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%);
+  color: #f5f5f7;
+}
+
+.dark body {
+  background: #000;
+  color: #f5f5f7;
+}
+
+/* Responsive per mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
 }

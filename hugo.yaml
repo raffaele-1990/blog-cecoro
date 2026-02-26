@@ -15,6 +15,7 @@ params:
   keywords: ["avvocato", "raffaele cecoro", "parole", "diritto", "letteratura", "arte"]
   author: "Raffaele Cecoro"
 
+  # Stile Apple: minimalista, font SF Pro, dark/light auto
   defaultTheme: auto
   disableThemeToggle: false
 
@@ -25,20 +26,12 @@ params:
   ShowWordCount: true
   UseHugoToc: true
 
-  # Mostra 3 post recenti in fondo
-  ShowRecentPostsInHome: true
-  recentPostsCount: 3
+  # Home "demo style" (Home-Info mode) - invariato
+  homeInfoParams:
+    Title: "Avvocato Raffaele Cecoro"
+    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
 
-  # Profilo con FOTO CIRCOLARE centrata
-  profileMode:
-    enabled: true
-    title: "Raffaele Cecoro"
-    subtitle: "Avvocato Raffaele Cecoro"
-    avatar: "images/avatar.jpg"
-    avatarAlt: "Foto profilo Raffaele Cecoro"
-    text: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
-
-  # Social centrati sotto foto
+  # Social Icons - invariati
   socialIcons:
     - name: "github"
       url: "https://github.com/raffaele-1990"
@@ -48,6 +41,12 @@ params:
       url: "https://facebook.com/raffaelececoro"
     - name: "mastodon"
       url: "https://mastodon.social/@cecoro"
+
+  # Asset custom per stile Apple
+  assets:
+    disableFingerprinting: false  # Per integrità SRI [web:1]
+    favicon: "/favicon.ico"
+    apple_touch_icon: "/apple-touch-icon.png"
 
 menu:
   main:
@@ -71,3 +70,5 @@ menu:
 markup:
   highlight:
     noClasses: false
+
+# CSS custom per stile Apple (crea file assets/css/extended/apple-style.css)
