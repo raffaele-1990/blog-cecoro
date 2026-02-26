@@ -28,15 +28,7 @@ params:
   # Home "demo style" (Home-Info mode)
   homeInfoParams:
     Title: "Avvocato Raffaele Cecoro"
-    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un' incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
-
-  # Profilo con foto circolare (OPZIONALE)
-  profileMode:
-    enabled: true
-    title: "Raffaele Cecoro"
-    subtitle: "Avvocato | Giornalista pubblicista"
-    avatar: "images/avatar.jpg"
-    avatarAlt: "Foto profilo Raffaele Cecoro"
+    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
 
   # Social Icons
   socialIcons:
