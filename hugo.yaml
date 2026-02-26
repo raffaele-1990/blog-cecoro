@@ -25,12 +25,20 @@ params:
   ShowWordCount: true
   UseHugoToc: true
 
-  # Home "demo style" (Home-Info mode)
-  homeInfoParams:
-    Title: "Avvocato Raffaele Cecoro"
-    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
+  # Mostra 3 post recenti in fondo
+  ShowRecentPostsInHome: true
+  recentPostsCount: 3
 
-  # Social Icons
+  # Profilo con FOTO CIRCOLARE centrata
+  profileMode:
+    enabled: true
+    title: "Raffaele Cecoro"
+    subtitle: "Avvocato Raffaele Cecoro"
+    avatar: "images/avatar.jpg"
+    avatarAlt: "Foto profilo Raffaele Cecoro"
+    text: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
+
+  # Social centrati sotto foto
   socialIcons:
     - name: "github"
       url: "https://github.com/raffaele-1990"
