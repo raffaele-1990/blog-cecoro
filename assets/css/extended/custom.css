@@ -92,3 +92,76 @@ body {
     padding: 1rem;
   }
 }
+
+/* Aggiungi queste regole al tuo apple-style.css per fixare i post in dark mode */
+
+/* Fix post-entry in dark mode */
+.dark .post-entry {
+  background: #1c1c1e; /* Nero tenue Apple dark */
+  border: 1px solid #38383d; /* Bordo grigio scuro */
+  color: #f5f5f7;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.dark .post-entry:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+  background: #2c2c2e;
+}
+
+/* Fix testo e link nei post dark mode */
+.dark .post-entry h1,
+.dark .post-entry h2,
+.dark .post-entry h3,
+.dark .entry-content {
+  color: #f5f5f7 !important;
+}
+
+.dark .post-entry a {
+  color: #0071e3; /* Blu Apple */
+  text-decoration: none;
+}
+
+.dark .post-entry a:hover {
+  text-decoration: underline;
+}
+
+/* Fix header e menu in dark */
+.dark .header {
+  border-bottom-color: #38383d;
+  background: rgba(28, 28, 30, 0.8);
+  backdrop-filter: blur(20px); /* Effetto vetro Apple */
+}
+
+.dark .menu__link {
+  color: #f5f5f7;
+}
+
+.dark .menu__link:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Fix TOC e altri elementi comuni */
+.dark .toc {
+  background: #2c2c2e;
+  border-color: #38383d;
+}
+
+.dark .toc a {
+  color: #b3b3b5;
+}
+
+.dark .toc a:hover {
+  color: #f5f5f7;
+}
+
+/* Sidebar e footer dark */
+.dark .sidebar {
+  background: #1c1c1e;
+  border-color: #38383d;
+}
+
+.dark footer {
+  background: #000;
+  border-top-color: #38383d;
+  color: #86868b;
+}
