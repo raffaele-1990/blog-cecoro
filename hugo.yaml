@@ -25,16 +25,11 @@ params:
   ShowWordCount: true
   UseHugoToc: true
 
-  ShowAllPagesInPostsList: false
+  # Mostra ultimi 3 post in homepage
   ShowRecentPostsInHome: true
-  recentPostsCount: 3  # ← 3 ultimi post
+  recentPostsCount: 3
 
-  # Home "demo style" (Home-Info mode)
-  homeInfoParams:
-    Title: "Avvocato Raffaele Cecoro"
-    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un' incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
-
-  # Profilo con foto circolare + descrizione sotto
+  # Profilo con foto circolare (SOLUZIONE 1)
   profileMode:
     enabled: true
     title: "Raffaele Cecoro"
