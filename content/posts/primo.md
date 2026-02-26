@@ -6,7 +6,7 @@ date: 2026-02-26T18:00:00+01:00
 
 description: "L’approccio all’inclusione scolastica in Italia si trova a un bivio cruciale poiché ormai da anni si è fortemente radicata nella scuola la percezione che l’assistenza agli studenti con disabilità sia una missione nobile ad appannaggio esclusivo dell’insegnante di sostegno e che essa sia figlia di una vocazione."
 
-tags: "Scuola"
+tags:
 
 draft: false
 
