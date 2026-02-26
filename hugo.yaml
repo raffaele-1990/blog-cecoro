@@ -1,0 +1,62 @@
+baseURL: "https://raffaele-1990.github.io/blog-cecoro/"
+title: "Raffaele Cecoro | Avvocato"
+theme: ["PaperMod"]
+paginate: 10
+enableRobotsTXT: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  title: "Raffaele Cecoro | Avvocato"
+  description: "Blog legale di Raffaele Cecoro: aggiornamenti, approfondimenti e risorse su diritto, contenzioso e strategie per imprese."
+  keywords: ["avvocato", "studio legale", "consulenza legale", "diritto civile", "diritto commerciale", "contenzioso", "Roma"]
+  author: "Raffaele Cecoro"
+
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowWordCount: true
+  UseHugoToc: true
+
+  # Home "demo style" (Home-Info mode)
+  homeInfoParams:
+    Title: "Avvocato Raffaele Cecoro"
+    Content: >
+      Approfondimenti chiari e pratici su diritto civile e commerciale.
+      Note operative, aggiornamenti giurisprudenziali e strategie per tutelare persone e imprese.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/USERNAME"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/USERNAME/"
+
+menu:
+  main:
+    - identifier: chisono
+      name: "Chi sono"
+      url: "/chi-sono/"
+      weight: 10
+    - identifier: pubblicazioni
+      name: "Pubblicazioni"
+      url: "/pubblicazioni/"
+      weight: 20
+    - identifier: contatti
+      name: "Contatti"
+      url: "/contatti/"
+      weight: 30
+    - identifier: blog
+      name: "Blog"
+      url: "/posts/"
+      weight: 40
+
+markup:
+  highlight:
+    noClasses: false

@@ -1,0 +1,7 @@
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", Arial, sans-serif;
+}
+body, button, input, select, textarea {
+  font-family: var(--font-family);
+}
