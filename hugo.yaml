@@ -11,8 +11,8 @@ minify:
 params:
   env: production
   title: "Raffaele Cecoro | Avvocato"
-  description: "Blog legale di Raffaele Cecoro: aggiornamenti, approfondimenti e risorse su diritto, contenzioso e strategie per imprese."
-  keywords: ["avvocato", "studio legale", "consulenza legale", "diritto civile", "diritto commerciale", "contenzioso", "Roma"]
+  description: "Blog di Raffaele Cecoro: tante parole e pochi fatti"
+  keywords: ["avvocato", "raffaele cecoro", "parole", "diritto", "letteratura", "arte"]
   author: "Raffaele Cecoro"
 
   defaultTheme: auto
@@ -29,14 +29,16 @@ params:
   homeInfoParams:
     Title: "Avvocato Raffaele Cecoro"
     Content: >
-      Approfondimenti chiari e pratici su diritto civile e commerciale.
-      Note operative, aggiornamenti giurisprudenziali e strategie per tutelare persone e imprese.
+Avvocato, giornalista pubblicista e docente, ogni giorno per me è un’opportunità di esplorazione, un' incessante scoperta di dettagli che sfuggono all’occhio distratto. Mi lascio sedurre dalla bellezza del particolare.
+
+
+
 
   socialIcons:
     - name: github
       url: "https://github.com/USERNAME"
     - name: linkedin
-      url: "https://www.linkedin.com/in/USERNAME/"
+      url: "https://it.linkedin.com/in/raffaele-cecoro-67645b42"
 
 menu:
   main:
