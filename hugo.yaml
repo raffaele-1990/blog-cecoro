@@ -14,10 +14,8 @@ params:
   description: "Blog di Raffaele Cecoro: tante parole e pochi fatti"
   keywords: ["avvocato", "raffaele cecoro", "parole", "diritto", "letteratura", "arte"]
   author: "Raffaele Cecoro"
-
   defaultTheme: auto
   disableThemeToggle: false
-
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -27,16 +25,14 @@ params:
 
   # Home "demo style" (Home-Info mode)
   homeInfoParams:
-  Title: "Avvocato Raffaele Cecoro"
-  Content: >
-    Avvocato, giornalista pubblicista e docente, ogni giorno per me e un'opportunita di esplorazione, un' incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare.
+    Title: "Avvocato Raffaele Cecoro"
+    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un' incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
 
-
-  socialIcons:
-    - name: github
-      url: "https://github.com/raffaele-1990"
-    - name: linkedin
-      url: "https://it.linkedin.com/in/raffaele-cecoro-67645b42"
+socialIcons:
+  - name: github
+    url: "https://github.com/raffaele-1990"
+  - name: linkedin
+    url: "https://it.linkedin.com/in/raffaele-cecoro-67645b42"
 
 menu:
   main:
