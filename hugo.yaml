@@ -15,7 +15,6 @@ params:
   keywords: ["avvocato", "raffaele cecoro", "parole", "diritto", "letteratura", "arte"]
   author: "Raffaele Cecoro"
 
-  # Stile Apple: minimalista, font SF Pro, dark/light auto
   defaultTheme: auto
   disableThemeToggle: false
 
@@ -26,12 +25,12 @@ params:
   ShowWordCount: true
   UseHugoToc: true
 
-  # Home "demo style" (Home-Info mode) - invariato
+  # Home "demo style" (Home-Info mode)
   homeInfoParams:
     Title: "Avvocato Raffaele Cecoro"
     Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
 
-  # Social Icons - invariati
+  # Social Icons
   socialIcons:
     - name: "github"
       url: "https://github.com/raffaele-1990"
@@ -41,12 +40,6 @@ params:
       url: "https://facebook.com/raffaelececoro"
     - name: "mastodon"
       url: "https://mastodon.social/@cecoro"
-
-  # Asset custom per stile Apple
-  assets:
-    disableFingerprinting: false  # Per integrità SRI [web:1]
-    favicon: "/favicon.ico"
-    apple_touch_icon: "/apple-touch-icon.png"
 
 menu:
   main:
@@ -70,5 +63,3 @@ menu:
 markup:
   highlight:
     noClasses: false
-
-# CSS custom per stile Apple (crea file assets/css/extended/apple-style.css)
