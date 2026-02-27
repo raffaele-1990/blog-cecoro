@@ -1,7 +1,7 @@
 baseURL: "https://raffaele-1990.github.io/blog-cecoro/"
 title: "Raffaele Cecoro | BLOG"
 theme: ["PaperMod"]
-paginate: 10
+pagerSize: 10
 enableRobotsTXT: true
 
 minify:
