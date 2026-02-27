@@ -1,5 +1,5 @@
 baseURL: "https://raffaele-1990.github.io/blog-cecoro/"
-title: "Raffaele Cecoro | Avvocato"
+title: "Raffaele Cecoro | BLOG"
 theme: ["PaperMod"]
 paginate: 10
 enableRobotsTXT: true
@@ -10,7 +10,7 @@ minify:
 
 params:
   env: production
-  title: "Raffaele Cecoro | Avvocato"
+  title: "Raffaele Cecoro | Blog"
   description: "Blog di Raffaele Cecoro: tante parole e pochi fatti"
   keywords: ["avvocato", "raffaele cecoro", "parole", "diritto", "letteratura", "arte"]
   author: "Raffaele Cecoro"
@@ -27,19 +27,21 @@ params:
 
   # Home "demo style" (Home-Info mode)
   homeInfoParams:
-    Title: "Avvocato Raffaele Cecoro"
-    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto. Mi lascio sedurre dalla bellezza del particolare."
+    Image: "/images/raffaele-cecoro.jpg"
+    Title: "Raffaele Cecoro"
+    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto lasciandomi sedurre dalla bellezza del particolare."
 
   # Social Icons
   socialIcons:
+    - name: "mastodon"
+      url: "https://mastodon.social/@cecoro"
     - name: "github"
       url: "https://github.com/raffaele-1990"
     - name: "linkedin"
       url: "https://it.linkedin.com/in/raffaele-cecoro-67645b42"
     - name: "facebook"
       url: "https://facebook.com/raffaelececoro"
-    - name: "mastodon"
-      url: "https://mastodon.social/@cecoro"
+    
 
 menu:
   main:
