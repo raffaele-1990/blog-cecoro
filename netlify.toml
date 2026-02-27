@@ -3,7 +3,14 @@
   publish = "public"
 
 [build.environment]
-  HUGO_VERSION = "0.155.2"     # Ultima stable 2026, perfetto!
+  HUGO_VERSION = "0.155.2"
+
+
+[build.processing]
+  skip_processing = [
+    "static/admin/*",
+    "static/admin/index.html"
+  ]
 
 [[redirects]]
   from = "/admin"
