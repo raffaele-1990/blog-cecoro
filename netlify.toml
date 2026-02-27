@@ -1,5 +1,12 @@
 [build]
   command = "hugo --gc --minify"
   publish = "public"
+
 [build.environment]
-  HUGO_VERSION = "0.155.2"
+  HUGO_VERSION = "0.155.2"     # Ultima stable 2026, perfetto!
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+  force = true
