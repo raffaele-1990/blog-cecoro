@@ -1,0 +1,39 @@
+/* PaperMod contact form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  /* Usa le variabili di PaperMod così resta coerente in light/dark */
+  background: var(--entry);
+  color: var(--primary);
+  border: 1px solid var(--border);
+
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: var(--secondary);
+}
+
+.contact-form label {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  color: var(--primary);
+}
+
+.contact-form button {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--primary);
+  color: var(--theme);
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.92;
+}
