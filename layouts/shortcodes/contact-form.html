@@ -1,31 +1,39 @@
-<form name="contatti"
+<form class="contact-form"
+      name="contatti"
       method="POST"
       action="/grazie/"
       data-netlify="true"
       netlify-honeypot="bot-field">
 
+  <!-- Netlify usa il name del form per identificarlo, e il campo hidden form-name deve combaciare -->
   <input type="hidden" name="form-name" value="contatti" />
 
+  <!-- Honeypot anti-spam (campo “trappola” nascosto) -->
   <p style="display:none;">
-    <label>Non compilare: <input name="bot-field" /></label>
-  </p>
-
-  <p>
-    <label>Nome<br>
-      <input type="text" name="name" required />
+    <label>
+      Non compilare questo campo:
+      <input name="bot-field" />
     </label>
   </p>
 
   <p>
-    <label>Email<br>
-      <input type="email" name="email" required />
-    </label>
+    <label for="cf-name">Nome</label><br>
+    <input id="cf-name" type="text" name="name" placeholder="Il tuo nome" required>
   </p>
 
   <p>
-    <label>Messaggio<br>
-      <textarea name="message" rows="7" required></textarea>
-    </label>
+    <label for="cf-email">Email</label><br>
+    <input id="cf-email" type="email" name="email" placeholder="nome@email.it" required>
+  </p>
+
+  <p>
+    <label for="cf-subject">Oggetto</label><br>
+    <input id="cf-subject" type="text" name="subject" placeholder="Richiesta informazioni" required>
+  </p>
+
+  <p>
+    <label for="cf-message">Messaggio</label><br>
+    <textarea id="cf-message" name="message" rows="7" placeholder="Scrivi qui..." required></textarea>
   </p>
 
   <p>
