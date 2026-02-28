@@ -1,0 +1,34 @@
+<form name="contatti"
+      method="POST"
+      action="/grazie/"
+      data-netlify="true"
+      netlify-honeypot="bot-field">
+
+  <input type="hidden" name="form-name" value="contatti" />
+
+  <p style="display:none;">
+    <label>Non compilare: <input name="bot-field" /></label>
+  </p>
+
+  <p>
+    <label>Nome<br>
+      <input type="text" name="name" required />
+    </label>
+  </p>
+
+  <p>
+    <label>Email<br>
+      <input type="email" name="email" required />
+    </label>
+  </p>
+
+  <p>
+    <label>Messaggio<br>
+      <textarea name="message" rows="7" required></textarea>
+    </label>
+  </p>
+
+  <p>
+    <button type="submit">Invia</button>
+  </p>
+</form>
