@@ -1,68 +1,46 @@
 backend:
   name: git-gateway
-  repo: raffaele-1990/blog-cecoro
   branch: main
-  auth_type: implicit  # Login GitHub OAuth semplificato
-  accept_roles: [editor, author]  # Controllo accessi
 
-media_folder: "static/img/uploads"  # Sottocartella per media CMS
-public_folder: "/img/uploads"       # Path pubblico Hugo
-thumbnail_media: true              # Anteprime immagini
+publish_mode: editorial_workflow
+
+media_folder: "static/img/uploads"
+public_folder: "/img/uploads"
+
+site_url: "https://raffaelececoro.com"
+display_url: "https://raffaelececoro.com"
+
+logo:
+  src: "/img/logo.png"
+  show_in_header: true
+
+show_preview_links: false
 
 collections:
   - name: "posts"
-    label: "📝 Articoli"
+    label: "Articoli"
     folder: "content/posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
-    summary: "{{fields.title}} - {{fields.date}}"  # Preview lista
+    summary: "{{date}} — {{title}}"
     fields:
-      - { label: "Titolo (SEO)", name: "title", widget: "string", required: true }
-      - { label: "Data Pubblicazione", name: "date", widget: "datetime", required: true }
-      - { label: "Descrizione (Meta)", name: "description", widget: "text", required: true }
-      - { label: "Immagine Copertina", name: "image", widget: "image", required: false }
-      - { label: "Tag", name: "tags", widget: "list", field: {label: "Tag", name: "tag", widget: "string"} }
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Data pubblicazione", name: "date", widget: "datetime" }
+      - { label: "Descrizione (meta)", name: "description", widget: "text", required: false }
+      - { label: "Immagine copertina", name: "image", widget: "image", required: false }
+      - { label: "Tag", name: "tags", widget: "list", required: false }
       - { label: "Bozza", name: "draft", widget: "boolean", default: true }
-      - { label: "Contenuto", name: "body", widget: "markdown", required: true }
-      - { label: "Slug (URL)", name: "slug", widget: "string", required: false }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
 
   - name: "pagine"
-    label: "📄 Pagine Statiche"
+    label: "Pagine"
+    editor:
+      preview: false
     files:
-      - label: "👤 Chi Sono"
+      - label: "Chi sono"
         name: "chi-sono"
         file: "content/chi-sono/index.md"
-        description: "Pagina Chi Sono/About"
         fields:
-          - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Descrizione", name: "description", widget: "text" }
-          - { label: "Immagine", name: "image", widget: "image" }
-          - { label: "Contenuto", name: "body", widget: "markdown" }
-
-      - label: "📚 Pubblicazioni"
-        name: "pubblicazioni"
-        file: "content/pubblicazioni/index.md"
-        description: "Lista pubblicazioni"
-        fields:
-          - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Descrizione", name: "description", widget: "text" }
-          - { label: "Contenuto", name: "body", widget: "markdown" }
-
-      - label: "✉️ Contatti"
-        name: "contatti"
-        file: "content/contatti/index.md"
-        description: "Pagina contatti"
-        fields:
-          - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Descrizione", name: "description", widget: "text" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Contenuto", name: "body", widget: "markdown" }
-
-# Config UI migliorata
-local_backend: true  # Per sviluppo locale
-publish_mode: editorial_workflow  # Draft/Published workflow
-site_url: "https://raffaelececoro.com"  # ← CAMBIA col tuo dominio
-display_url: "https://raffaelececoro.com"  # ← STESSO
-logo_url: "/img/logo.png"  # ← Aggiungi logo se hai
+          - { label: "Titolo", name: "title",
