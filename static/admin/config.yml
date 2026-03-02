@@ -2,51 +2,21 @@ backend:
   name: git-gateway
   branch: main
 
+media_folder: static/img/uploads
+public_folder: /img/uploads
 media_library:
-  name: default
-
-publish_mode: editorial_workflow
-
-media_folder: "static/img/uploads"
-public_folder: "/img/uploads"
-
-site_url: "https://raffaelececoro.com"
-display_url: "https://raffaelececoro.com"
+  name: image-gallery
+  config:
+    defaultAlbums:
+      - name: "Uploads"
 
 collections:
-  - name: "posts"
-    label: "Articoli"
-    folder: "content/posts"
+  - name: posts
+    label: Posts
+    folder: content/posts
     create: true
-    format: "yaml-frontmatter"
-    extension: "md"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
     fields:
-      - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime", default: "{{now}}" }
-      - { label: "Descrizione", name: "description", widget: "text", required: false }
-      - { label: "Bozza", name: "draft", widget: "boolean", default: true }
-      - { label: "Contenuto", name: "body", widget: "markdown" }
-
-  - name: "pagine"
-    label: "Pagine"
-    editor:
-      preview: false
-    files:
-      - label: "Chi sono"
-        name: "chi-sono"
-        file: "content/chi-sono/index.md"
-        fields:
-          - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Descrizione", name: "description", widget: "text" }
-          - { label: "Contenuto", name: "body", widget: "markdown" }
-
-      - label: "Contatti"
-        name: "contatti"
-        file: "content/contatti/index.md"
-        fields:
-          - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Contenuto", name: "body", widget: "markdown" }
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Draft", name: "draft", widget: "boolean"}
+      - {label: "Body", name: "body", widget: "markdown"}
