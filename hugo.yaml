@@ -68,11 +68,11 @@ menu:
     - identifier: blog
       name: "📝 Blog"
       url: "/posts/"
-      weight: 40
+      weight: 30
     - identifier: contatti
       name: "✉️ Contatti"
       url: "/contatti/"
-      weight: 30
+      weight: 40
   
 
 markup:
