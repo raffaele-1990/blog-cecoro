@@ -13,7 +13,6 @@ languages:
     languageName: "Italiano"
     weight: 1
 
-
 minify:
   disableXML: true
   minifyOutput: true
@@ -26,27 +25,26 @@ params:
   author: "Raffaele Cecoro"
   ShowAllPagesInArchive: true
   comments: false
-  params:
   DateFormat: "02/01/2006"
-  ShowWordCount: false  
-  images:
-    - "/images/og-default.png"
-  defaultTheme: auto
-  disableThemeToggle: false
+  ShowWordCount: false
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   UseHugoToc: true
-
+  images: ["/images/og-default.png"]
+  defaultTheme: auto
+  disableThemeToggle: false
+  mainSections: ["posts"]  # ← AGGIUNTO: PostNavLinks su /posts
+  
   # Home "demo style" (Home-Info mode)
- homeInfoParams:
-  Title: "Raffaele Cecoro"
-  Content: |
-    Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto lasciandomi sedurre dalla bellezza del particolare.
-
- 
-  # Social Icons
+  homeInfoParams:
+    Title: "Raffaele Cecoro"
+    Content: |
+      Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto lasciandomi sedurre dalla bellezza del particolare.
+    AlignSocialIconsTo: "center"  # ← AGGIUNTO: social centrati
+  
+  # Social Icons (funziona in homeInfo)
   socialIcons:
     - name: "mastodon"
       url: "https://mastodon.social/@cecoro"
@@ -56,7 +54,6 @@ params:
       url: "https://it.linkedin.com/in/raffaele-cecoro-67645b42"
     - name: "facebook"
       url: "https://facebook.com/raffaelececoro"
-    
 
 menu:
   main:
@@ -78,5 +75,8 @@ menu:
       weight: 40
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true  # ← AGGIUNTO: embed video/iframe
   highlight:
     noClasses: false
