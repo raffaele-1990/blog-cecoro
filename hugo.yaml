@@ -33,7 +33,7 @@ params:
   ShowBreadCrumbs: true
   UseHugoToc: true
   images: ["/images/og-default.png"]
-  defaultTheme: light
+  defaultTheme: auto
   disableThemeToggle: false
   mainSections: ["posts"]  # ← AGGIUNTO: PostNavLinks su /posts
   
