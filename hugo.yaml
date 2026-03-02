@@ -24,12 +24,15 @@ params:
   description: "Blog di Raffaele Cecoro, avvocato e giornalista: articoli su diritto, attualità, cultura, letteratura e arte. Nuovi post ogni settimana"
   keywords: ["politica", "giustizia", "filosofia", "diritto", "letteratura", "arte"]
   author: "Raffaele Cecoro"
-
+  ShowAllPagesInArchive: true
+  comments: false
+  params:
+  DateFormat: "02/01/2006"
+  ShowWordCount: false  
   images:
     - "/images/og-default.png"
   defaultTheme: auto
   disableThemeToggle: false
-
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -39,10 +42,17 @@ params:
 
   # Home "demo style" (Home-Info mode)
   homeInfoParams:
-    Image: "/images/raffaele-cecoro.jpg"
-    Title: "Raffaele Cecoro"
-    Content: "Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto lasciandomi sedurre dalla bellezza del particolare."
+  Title: "Raffaele Cecoro"
+  Content: |
+    <div style="text-align:center; padding:3rem 0;">
+      <h1 style="font-size:3rem; font-weight:700; margin:0 0 0.5rem; line-height:1.1;">Raffaele Cecoro</h1>
+      <p style="font-size:1.2rem; color:var(--secondary); margin:0 0 2rem;">Avvocato | Giornalista pubblicista | Docente</p>
+      <p style="max-width:600px; margin:0 auto 2rem; font-size:1.1rem; opacity:0.9;">
+        Riflessioni su diritto, cultura e società. Articoli chiari per orientarsi nel mondo complesso di oggi.
+      </p>
+    </div>
 
+ 
   # Social Icons
   socialIcons:
     - name: "mastodon"

@@ -1,0 +1,14 @@
+.entry-card-wrapper {
+  transition: all 0.3s ease;
+}
+
+.entry-card-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.entry-cover {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
