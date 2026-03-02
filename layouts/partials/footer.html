@@ -6,3 +6,21 @@
     </div>
   </div>
 </footer>
+
+<!-- Netlify Identity Widget (fix link conferma) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    netlifyIdentity.on("init", user => {
+      if (user) {
+        // Utente loggato → redirect admin
+        window.location.href = "/admin/";
+      }
+    });
+    
+    // Fix link conferma email redirect
+    if (window.location.hash.includes("_token") || window.location.hash.includes("confirmation_token")) {
+      netlifyIdentity.open();
+    }
+  }
+</script>
