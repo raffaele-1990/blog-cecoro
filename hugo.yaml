@@ -37,7 +37,6 @@ params:
   ShowShareButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowWordCount: true
   UseHugoToc: true
 
   # Home "demo style" (Home-Info mode)
