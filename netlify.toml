@@ -6,9 +6,9 @@
   HUGO_VERSION = "0.155.2"
   HUGO_ENV = "production"
 
-# (opzionale) Forza /admin -> /admin/ (evita 404 se qualcuno digita senza slash)
+# SOLO ADMIN - NIENTE SEO
 [[redirects]]
-  from = "/admin"
-  to = "/admin/"
-  status = 301
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
   force = true
