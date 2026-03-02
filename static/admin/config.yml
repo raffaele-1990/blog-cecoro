@@ -1,17 +1,9 @@
 backend:
   name: git-gateway
   branch: main
-  commit_messages:
-    create: 'Create {{collection}} "{{slug}}"'
-    update: 'Update {{collection}} "{{slug}}"'
-    delete: 'Delete {{collection}} "{{slug}}"'
-    uploadMedia: 'Upload "{{path}}"'
-    deleteMedia: 'Delete "{{path}}"'
-    openAuthoring: '{{message}}'
 
-# ✅ AGGIUNTO QUESTO BLOCCO (obbligatorio)
 media_library:
-  name: uploadcare
+  name: default
 
 publish_mode: editorial_workflow
 
@@ -21,65 +13,27 @@ public_folder: "/img/uploads"
 site_url: "https://raffaelececoro.com"
 display_url: "https://raffaelececoro.com"
 
-logo:
-  src: "/img/logo.png"
-  show_in_header: true
-
-show_preview_links: false
-
 collections:
   - name: "posts"
     label: "Articoli"
     folder: "content/posts"
     create: true
     format: "yaml-frontmatter"
-    frontmatter_delimiter: "---"
     extension: "md"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{date}} — {{title}}"
     editor:
       preview: false
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
-      - label: "Data"
-        name: "date"
-        widget: "datetime"
-        default: "{{now}}"
-      - { label: "Descrizione (meta)", name: "description", widget: "text", required: false }
-      - label: "Tag"
-        name: "tags"
-        widget: "list"
-        required: false
-        field: { label: "Tag", name: "tag", widget: "string" }
-      - label: "Categorie"
-        name: "categories"
-        widget: "list"
-        required: false
-        field: { label: "Categoria", name: "category", widget: "string" }
-      - label: "Keywords"
-        name: "keywords"
-        widget: "list"
-        required: false
-        field: { label: "Keyword", name: "keyword", widget: "string" }
-      - label: "Cover (PaperMod)"
-        name: "cover"
-        widget: "object"
-        required: false
-        collapsed: true
-        fields:
-          - { label: "Immagine", name: "image", widget: "image" }
-          - { label: "Testo ALT", name: "alt", widget: "string" }
-          - { label: "Caption", name: "caption", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime", default: "{{now}}" }
+      - { label: "Descrizione", name: "description", widget: "text", required: false }
       - { label: "Bozza", name: "draft", widget: "boolean", default: true }
       - { label: "Contenuto", name: "body", widget: "markdown" }
 
   - name: "pagine"
-    label: "Pagine statiche"
+    label: "Pagine"
     editor:
       preview: false
-    format: "yaml-frontmatter"
-    frontmatter_delimiter: "---"
-    extension: "md"
     files:
       - label: "Chi sono"
         name: "chi-sono"
@@ -87,20 +41,12 @@ collections:
         fields:
           - { label: "Titolo", name: "title", widget: "string" }
           - { label: "Descrizione", name: "description", widget: "text" }
-          - { label: "Immagine", name: "image", widget: "image" }
           - { label: "Contenuto", name: "body", widget: "markdown" }
-      - label: "Pubblicazioni"
-        name: "pubblicazioni"
-        file: "content/pubblicazioni/index.md"
-        fields:
-          - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Descrizione", name: "description", widget: "text" }
-          - { label: "Contenuto", name: "body", widget: "markdown" }
+
       - label: "Contatti"
         name: "contatti"
         file: "content/contatti/index.md"
         fields:
           - { label: "Titolo", name: "title", widget: "string" }
-          - { label: "Descrizione", name: "description", widget: "text" }
           - { label: "Email", name: "email", widget: "string" }
           - { label: "Contenuto", name: "body", widget: "markdown" }
