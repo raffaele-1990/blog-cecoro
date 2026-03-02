@@ -1,4 +1,10 @@
 # --- ADMIN (metti QUESTE PER PRIME) ---
+
+[[headers]]
+  for = "/admin/config.yml"
+  [headers.values]
+    Content-Type = "text/yaml"
+
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
