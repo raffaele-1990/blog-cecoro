@@ -6,28 +6,9 @@
   HUGO_VERSION = "0.155.2"
   HUGO_ENV = "production"
 
-# ------------------------- ADMIN PRIMA (EVITA redirect loop) -----------------------
+# (opzionale) Forza /admin -> /admin/ (evita 404 se qualcuno digita senza slash)
 [[redirects]]
   from = "/admin"
   to = "/admin/"
   status = 301
   force = true
-
-# ------------------------- REDIRECTS DOPO ADMIN ------------------------------
-# 1) www -> non-www (MA NON /admin)
-[[redirects]]
-  from = "https://www.raffaelececoro.com/*"
-  to = "https://raffaelececoro.com/:splat"
-  status = 301
-  force = true
-  conditions:
-    Path: !/admin*
-
-# 2) netlify.app -> dominio principale
-[[redirects]]
-  from = "https://raffaelececoro.netlify.app/*"
-  to = "https://raffaelececoro.com/:splat"
-  status = 301
-  force = true
-  conditions:
-    Path: !/admin*
