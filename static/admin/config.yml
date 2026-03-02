@@ -9,6 +9,10 @@ backend:
     deleteMedia: 'Delete "{{path}}"'
     openAuthoring: '{{message}}'
 
+# ✅ AGGIUNTO QUESTO BLOCCO (obbligatorio)
+media_library:
+  name: uploadcare
+
 publish_mode: editorial_workflow
 
 media_folder: "static/img/uploads"
