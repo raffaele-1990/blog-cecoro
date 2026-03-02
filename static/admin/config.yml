@@ -1,19 +1,22 @@
 backend:
   name: git-gateway
   branch: main
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+    openAuthoring: "{{message}}"
 
-# Workflow bozze/pubblicazione (utile e supportato)
 publish_mode: editorial_workflow
 
-# Media (Hugo: file dentro /static -> URL pubblica senza /static)
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
 
-# URL del sito (servono anche per alcuni redirect/login)
 site_url: "https://raffaelececoro.com"
 display_url: "https://raffaelececoro.com"
 
-# Logo (opzione moderna al posto di logo_url)
 logo:
   src: "/img/logo.png"
   show_in_header: true
@@ -26,12 +29,14 @@ collections:
     folder: "content/posts"
     create: true
 
-    # Forza YAML front matter (---) + body markdown
     format: "yaml-frontmatter"
     frontmatter_delimiter: "---"
     extension: "md"
 
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+
+    # Link "visualizza sul sito" (se riattivi show_preview_links)
+    preview_path: "posts/{{slug}}/"
 
     editor:
       preview: false
@@ -40,11 +45,45 @@ collections:
 
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime" }
+
+      - label: "Data"
+        name: "date"
+        widget: "datetime"
+        default: "{{now}}"
+
       - { label: "Descrizione (meta)", name: "description", widget: "text", required: false }
-      - { label: "Immagine copertina", name: "image", widget: "image", required: false }
-      - { label: "Tag", name: "tags", widget: "list", required: false }
+
+      - label: "Tag"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "3–6 tag, coerenti (es. diritto, attualità, privacy)."
+
+      - label: "Categorie"
+        name: "categories"
+        widget: "list"
+        required: false
+        hint: "1–2 categorie max (opzionale)."
+
+      - label: "Keywords"
+        name: "keywords"
+        widget: "list"
+        required: false
+        hint: "5–12 parole chiave (opzionale)."
+
+      # PaperMod cover (al posto del campo image singolo)
+      - label: "Cover (PaperMod)"
+        name: "cover"
+        widget: "object"
+        required: false
+        collapsed: true
+        fields:
+          - { label: "Immagine", name: "image", widget: "image", required: false }
+          - { label: "Testo ALT", name: "alt", widget: "string", required: false }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+
       - { label: "Bozza", name: "draft", widget: "boolean", default: true }
+
       - { label: "Contenuto", name: "body", widget: "markdown" }
 
   - name: "pagine"
@@ -52,7 +91,6 @@ collections:
     editor:
       preview: false
 
-    # Anche qui YAML front matter
     format: "yaml-frontmatter"
     frontmatter_delimiter: "---"
     extension: "md"
