@@ -42,7 +42,7 @@ params:
     Title: "Raffaele Cecoro"
     Content: |
       Avvocato, giornalista pubblicista e docente, ogni giorno per me è un'opportunità di esplorazione, un'incessante scoperta di dettagli che sfuggono all'occhio distratto lasciandomi sedurre dalla bellezza del particolare.
-    AlignSocialIconsTo: "center"  # ← AGGIUNTO: social centrati
+    AlignSocialIconsTo: "left"  # ← AGGIUNTO: social centrati
   
   # Social Icons (funziona in homeInfo)
   socialIcons:

@@ -1,16 +1,14 @@
-[build]
-  command = "hugo --gc --minify"
-  publish = "public"
-
-[build.environment]
-  HUGO_VERSION = "0.155.2"
-  HUGO_ENV = "production"
-
-# ------------------------- ADMIN (PRIMA per fix loop) -----------------------
+# --- ADMIN (metti QUESTE PER PRIME) ---
 [[redirects]]
   from = "/admin"
-  to = "/admin/"
-  status = 301
+  to = "/admin/index.html"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/admin/"
+  to = "/admin/index.html"
+  status = 200
   force = true
 
 [[redirects]]
@@ -18,6 +16,14 @@
   to = "/admin/index.html"
   status = 200
   force = true
+
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.155.2"
+  HUGO_ENV = "production"
 
 # ------------------------- SECURITY HEADERS -------------------------------
 [[headers]]
