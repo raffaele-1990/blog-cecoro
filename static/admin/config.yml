@@ -41,7 +41,7 @@ collections:
     files:
       - label: "Chi sono"
         name: "chi-sono"
-        file: "content/chi-sono/index.md"
+        file: "content/chi-sono/_index.md"
         fields:
           - { label: "Titolo", name: "title", widget: "string" }
           - { label: "Descrizione", name: "description", widget: "text", required: false }
@@ -50,7 +50,7 @@ collections:
 
       - label: "Pubblicazioni"
         name: "pubblicazioni"
-        file: "content/pubblicazioni/index.md"
+        file: "content/pubblicazioni/_index.md"
         fields:
           - { label: "Titolo", name: "title", widget: "string" }
           - { label: "Descrizione", name: "description", widget: "text", required: false }
@@ -58,7 +58,7 @@ collections:
 
       - label: "Contatti"
         name: "contatti"
-        file: "content/contatti/index.md"
+        file: "content/contatti/_index.md"
         fields:
           - { label: "Titolo", name: "title", widget: "string" }
           - { label: "Descrizione", name: "description", widget: "text", required: false }
