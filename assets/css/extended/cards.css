@@ -4,11 +4,16 @@
 
 .entry-card-wrapper:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+  box-shadow: 0 20px 40px var(--shadow);  /* Usa var del tema */
 }
 
 .entry-cover {
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
+}
+
+/* Opzionale: shadow specifica per modalità */
+.dark .entry-card-wrapper:hover {
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);  /* Più scuro in dark */
 }
