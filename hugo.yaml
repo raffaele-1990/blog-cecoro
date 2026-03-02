@@ -65,14 +65,15 @@ menu:
       name: "📚 Pubblicazioni"
       url: "/pubblicazioni/"
       weight: 20
-    - identifier: contatti
-      name: "✉️ Contatti"
-      url: "/contatti/"
-      weight: 30
     - identifier: blog
       name: "📝 Blog"
       url: "/posts/"
       weight: 40
+    - identifier: contatti
+      name: "✉️ Contatti"
+      url: "/contatti/"
+      weight: 30
+  
 
 markup:
   goldmark:
