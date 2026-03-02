@@ -10,8 +10,10 @@ collections:
     label: "Articoli"
     folder: "content/posts"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Titolo", name: "title", widget: "string" }
       - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Bozza", name: "draft", widget: "boolean" }
+      - { label: "Descrizione", name: "description", widget: "text" }
+      - { label: "Bozza", name: "draft", widget: "boolean", default: true }
       - { label: "Contenuto", name: "body", widget: "markdown" }
