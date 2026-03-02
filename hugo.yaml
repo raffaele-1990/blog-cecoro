@@ -41,7 +41,8 @@ params:
   homeInfoParams:
     Title: "Raffaele Cecoro"
     Content: |
-Avvocato, giornalista pubblicista e docente, considero ogni giorno un’opportunità di esplorazione: una continua scoperta di dettagli che sfuggono all’occhio distratto, lasciandomi affascinare dalla bellezza del particolare.   AlignSocialIconsTo: "left"  # ← AGGIUNTO: social centrati
+      Avvocato, giornalista pubblicista e docente, considero ogni giorno un’opportunità di esplorazione: una continua scoperta di dettagli che sfuggono all’occhio distratto, lasciandomi affascinare dalla bellezza del particolare.
+    AlignSocialIconsTo: "left"  # ← AGGIUNTO: social centrati
   
   # Social Icons (funziona in homeInfo)
   socialIcons:
