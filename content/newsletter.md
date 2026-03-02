@@ -2,9 +2,6 @@
 title: "Newsletter Raffaele Cecoro"
 date: 2026-03-02
 description: "Ricevi approfondimenti legali e culturali ogni settimana"
-menu: false
-  main:
-    weight: 3  # Terzo nel menu (dopo Home, Blog)
 draft: false
 ---
 
