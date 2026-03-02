@@ -6,7 +6,20 @@
   HUGO_VERSION = "0.155.2"
   HUGO_ENV = "production"
 
-# ------------------------- Headers SEO/Security -----------------------
+# ------------------------- ADMIN (PRIMA per fix loop) -----------------------
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+  force = true
+
+# ------------------------- SECURITY HEADERS -------------------------------
 [[headers]]
   for = "/*"
   [headers.values]
@@ -21,38 +34,47 @@
   [headers.values]
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; frame-ancestors 'none'"
 
-# ------------------------- Redirects SEO ------------------------------
-# 1) www -> non-www
-[[redirects]]
-  from = "https://www.raffaelececoro.com/*"
-  to = "https://raffaelececoro.com/:splat"
-  status = 301
-  force = true
-
-# 2) netlify.app -> dominio principale
-[[redirects]]
-  from = "https://raffaelececoro.netlify.app/*"
-  to = "https://raffaelececoro.com/:splat"
-  status = 301
-  force = true
-
-# 3) /admin -> /admin/ (Decap CMS)
-[[redirects]]
-  from = "/admin"
-  to = "/admin/"
-  status = 301
-  force = true
-
-# 4) HTTP -> HTTPS (forza SSL)
+# ------------------------- REDIRECTS SEO (ordine importante) -----------------
+# HTTP → HTTPS
 [[redirects]]
   from = "http://raffaelececoro.com/*"
   to = "https://raffaelececoro.com/:splat"
   status = 301
   force = true
 
-# 5) /posts -> / (home principale)
+# www → non-www
+[[redirects]]
+  from = "https://www.raffaelececoro.com/*"
+  to = "https://raffaelececoro.com/:splat"
+  status = 301
+  force = true
+
+# Netlify → dominio principale
+[[redirects]]
+  from = "https://raffaelececoro.netlify.app/*"
+  to = "https://raffaelececoro.com/:splat"
+  status = 301
+  force = true
+
+# /posts → / (home principale)
 [[redirects]]
   from = "/posts"
   to = "/"
   status = 301
   force = true
+
+# ------------------------- CACHE PERFORMANCE ------------------------------
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
