@@ -5,6 +5,9 @@ backend:
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
 
+media_library:
+  name: default
+
 collections:
   - name: "posts"
     label: "Posts"
