@@ -4,6 +4,16 @@ theme: ["PaperMod"]
 pagerSize: 10
 enableRobotsTXT: true
 
+languageCode: "it-IT"
+defaultContentLanguage: "it"
+
+languages:
+  it:
+    languageCode: "it-IT"
+    languageName: "Italiano"
+    weight: 1
+
+
 minify:
   disableXML: true
   minifyOutput: true
@@ -13,8 +23,7 @@ params:
   title: "Raffaele Cecoro | Blog"
   description: "Blog di Raffaele Cecoro, avvocato e giornalista: articoli su diritto, attualità, cultura, letteratura e arte. Nuovi post ogni settimana"
   keywords: ["politica", "giustizia", "filosofia", "diritto", "letteratura", "arte"]
-  author:
-    name: "Raffaele Cecoro"
+  author: "Raffaele Cecoro"
 
   images:
     - "/images/og-default.png"
