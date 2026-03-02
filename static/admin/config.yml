@@ -5,15 +5,13 @@ backend:
 media_folder: "static/img/uploads"
 public_folder: "/img/uploads"
 
-media_library:
-  name: default
-
 collections:
   - name: "posts"
-    label: "Posts"
+    label: "Articoli"
     folder: "content/posts"
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Titolo", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Bozza", name: "draft", widget: "boolean" }
+      - { label: "Contenuto", name: "body", widget: "markdown" }
